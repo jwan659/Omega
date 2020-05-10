@@ -1,18 +1,9 @@
-import Auxilliary as aux
-import bs4 as bs
-import datetime as dt
-import Indicators as i
-import os as os
-import pandas as pd
-import pandas_datareader.data as web
-import pickle
-import requests
+import Auxilliary as aux;   import bs4 as bs;   import datetime as dt
+import Indicators as i;     import os;          import pandas as pd
+import pickle;              import requests;    import concurrent.futures
 from datetime import datetime
 from yahoo_fin import stock_info as si
-import multiprocessing
-from multiprocessing import Process, current_process, Pool
-import time
-import shutil
+from pandas_datareader import data as web
 
 def save_sp500_tickers():
     resp = requests.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')
@@ -26,7 +17,7 @@ def save_sp500_tickers():
         pickle.dump(tickers,f)
     return tickers
 
-def make_data(df):
+def add_indicators(df):
     df.reset_index(inplace=True)
     df.set_index("Date", inplace=True)
     df['Weekly EMA'] = i.faster_ema(aux.to_weekly(df))
@@ -41,7 +32,7 @@ def get_stock_from_yahoo(ticker):
     print(ticker)
     try:
         df = web.DataReader(ticker, 'yahoo', start='2010-01-01', end=dt.datetime.today())
-        df = pd.DataFrame(make_data(df))
+        df = pd.DataFrame(add_indicators(df))
 
         # check if there are more than thirty days of prices
         date = dt.datetime.today() - dt.timedelta(days=30)
@@ -57,7 +48,13 @@ def get_raw_data():
     print(dt.datetime.today())
     print(len(tickers))
     
-    for ticker in tickers:
-        get_stock_from_yahoo(ticker)
-    
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        [executor.submit(get_stock_from_yahoo, ticker) for ticker in tickers]
     print('Stocks have been stored')
+
+def get_stock_list():
+    data = []
+    dir = os.fsencode('Data')
+    for stock in os.listdir(dir):
+        data.append(os.fsdecode(os.path.splitext(stock)[0]))
+    return data

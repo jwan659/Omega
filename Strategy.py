@@ -25,14 +25,14 @@ def impulse(stock,data,date):
     return 0
 
 def strat1(stock,data,date):
-    if Screen.weekly_macd_screen(data.loc[:,'Weekly MACD'],date) == 1:# and Screen.force_screen(data.loc[:,'Force Index'],date):
+    if Screen.weekly_macd_screen(data.loc[:,'Weekly MACD'],date) == 1 and Screen.force_screen(data.loc[:,'Force Index'],date):
         if Screen.multi_week_low_screen(data,date,15): # daily screen
-            return 1
-    return 0
+            return True
+    return False
 
 def strat2(stock,data,date):
-    if Screen.strong_weekly_macd_screen(data.loc[:,'Weekly MACD'],date) == 1 and Screen.daily_macd_screen(data.loc[:,'Daily MACD'],date) == 1:
-        if Screen.daily_ema_screen(data.loc[:,'Daily EMA'],date) and Screen.force_screen(data.loc[:,'Force Index'],date):
+    if Screen.weekly_macd_screen(data.loc[:,'Weekly MACD'],date) == 1 and Screen.strong_daily_macd_screen(data.loc[:,'Daily MACD'],date) == 1:
+        if Screen.daily_ema_screen(data.loc[:,'Daily EMA'],date):
             if Screen.multi_week_low_screen(data,date,15): # daily screen
                 return 1
     return 0

@@ -1,0 +1,181 @@
+[
+    {
+        "combinedBalances": [
+            {
+                "buyingPower": 658.30959,
+                "cash": 658.30959,
+                "currency": "CAD",
+                "isRealTime": true,
+                "maintenanceExcess": 658.30959,
+                "marketValue": 1854.739103,
+                "totalEquity": 2513.048692
+            },
+            {
+                "buyingPower": 472.668885,
+                "cash": 472.668885,
+                "currency": "USD",
+                "isRealTime": true,
+                "maintenanceExcess": 472.668885,
+                "marketValue": 1331.71,
+                "totalEquity": 1804.378885
+            }
+        ],
+        "perCurrencyBalances": [
+            {
+                "buyingPower": 0,
+                "cash": 0,
+                "currency": "CAD",
+                "isRealTime": true,
+                "maintenanceExcess": 0,
+                "marketValue": 0,
+                "totalEquity": 0
+            },
+            {
+                "buyingPower": 472.668885,
+                "cash": 472.668885,
+                "currency": "USD",
+                "isRealTime": true,
+                "maintenanceExcess": 472.668885,
+                "marketValue": 1331.71,
+                "totalEquity": 1804.378885
+            }
+        ],
+        "sodCombinedBalances": [
+            {
+                "buyingPower": 658.30959,
+                "cash": 658.30959,
+                "currency": "CAD",
+                "isRealTime": true,
+                "maintenanceExcess": 658.30959,
+                "marketValue": 1854.739103,
+                "totalEquity": 2513.048692
+            },
+            {
+                "buyingPower": 472.668885,
+                "cash": 472.668885,
+                "currency": "USD",
+                "isRealTime": true,
+                "maintenanceExcess": 472.668885,
+                "marketValue": 1331.71,
+                "totalEquity": 1804.378885
+            }
+        ],
+        "sodPerCurrencyBalances": [
+            {
+                "buyingPower": 0,
+                "cash": 0,
+                "currency": "CAD",
+                "isRealTime": true,
+                "maintenanceExcess": 0,
+                "marketValue": 0,
+                "totalEquity": 0
+            },
+            {
+                "buyingPower": 472.668885,
+                "cash": 472.668885,
+                "currency": "USD",
+                "isRealTime": true,
+                "maintenanceExcess": 472.668885,
+                "marketValue": 1331.71,
+                "totalEquity": 1804.378885
+            }
+        ]
+    },
+    {
+        "orders": []
+    },
+    {
+        "positions": [
+            {
+                "averageEntryPrice": 126.71,
+                "closedPnl": 0,
+                "closedQuantity": 0,
+                "currentMarketValue": 264.72,
+                "currentPrice": 132.36,
+                "dayPnl": 0,
+                "isRealTime": false,
+                "isUnderReorg": false,
+                "openPnl": 11.3,
+                "openQuantity": 2,
+                "symbol": "IWM",
+                "symbolId": 23826,
+                "totalCost": 253.42
+            },
+            {
+                "averageEntryPrice": 281.83,
+                "closedPnl": 0,
+                "closedQuantity": 0,
+                "currentMarketValue": 310.13,
+                "currentPrice": 310.13,
+                "dayPnl": 0,
+                "isRealTime": false,
+                "isUnderReorg": false,
+                "openPnl": 28.3,
+                "openQuantity": 1,
+                "symbol": "AAPL",
+                "symbolId": 8049,
+                "totalCost": 281.83
+            },
+            {
+                "averageEntryPrice": 23.375267,
+                "closedPnl": 0,
+                "closedQuantity": 0,
+                "currentMarketValue": 272.64,
+                "currentPrice": 22.72,
+                "dayPnl": 0,
+                "isRealTime": false,
+                "isUnderReorg": false,
+                "openPnl": -7.863204,
+                "openQuantity": 12,
+                "symbol": "DAL",
+                "symbolId": 15778,
+                "totalCost": 280.503204
+            },
+            {
+                "averageEntryPrice": 34.6288,
+                "closedPnl": 0,
+                "closedQuantity": 0,
+                "currentMarketValue": 116.34,
+                "currentPrice": 38.78,
+                "dayPnl": 0,
+                "isRealTime": false,
+                "isUnderReorg": false,
+                "openPnl": 12.4536,
+                "openQuantity": 3,
+                "symbol": "XLE",
+                "symbolId": 35761,
+                "totalCost": 103.8864
+            },
+            {
+                "averageEntryPrice": 26.6972,
+                "closedPnl": 0,
+                "closedQuantity": 0,
+                "currentMarketValue": 178.32,
+                "currentPrice": 22.29,
+                "dayPnl": 0,
+                "isRealTime": false,
+                "isUnderReorg": false,
+                "openPnl": -35.2576,
+                "openQuantity": 8,
+                "symbol": "XLF",
+                "symbolId": 35762,
+                "totalCost": 213.5776
+            },
+            {
+                "averageEntryPrice": 80.28,
+                "closedPnl": 0,
+                "closedQuantity": 0,
+                "currentMarketValue": 189.56,
+                "currentPrice": 94.78,
+                "dayPnl": 0,
+                "isRealTime": false,
+                "isUnderReorg": false,
+                "openPnl": 29,
+                "openQuantity": 2,
+                "symbol": "XLK",
+                "symbolId": 35764,
+                "totalCost": 160.56
+            }
+        ]
+    }
+]
